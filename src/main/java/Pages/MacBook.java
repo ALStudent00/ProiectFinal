@@ -106,6 +106,11 @@ public class MacBook {
         confirmOrder_button.click();
     }
 
+    public void clickUseNewAddress() {
+        WebElement newAddress_button = driver.findElement(By.xpath("//*[@id=\"collapse-payment-address\"]/div/form/div[3]/label/input"));
+        newAddress_button.click();
+    }
+
 
 
     public void continueBackToHomePage() {

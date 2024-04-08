@@ -59,6 +59,7 @@ public class Test extends BaseTest {
         macBook.LoginToCheckout();
         macBook.scrollToStep2();
         Thread.sleep(2000);
+
         macBook.continueUsingExistingAddress();
         macBook.scrollToStep3();
         Thread.sleep(1500);
@@ -67,6 +68,14 @@ public class Test extends BaseTest {
         macBook.continueToStep4();
         Thread.sleep(1500);
         macBook.confirmOrder();
+
+//        macBook.clickUseNewAddress();
+//        macBook.insertBillingDetails("John","User","Internet","La bulevard","Iasi","1234");
+//        macBook.selectCountry("Romania");
+//        Thread.sleep(1000);
+//        macBook.selectRegionState("Iasi");
+        // Selecteaza "I want to use new address" si arata doar introducerea  Datelor_de_Facturare  de la  Pasul_2, fara a avansa spre  Pasul_3_Metoda_de_Plata
+
         Thread.sleep(3000);
 
 
@@ -89,7 +98,7 @@ public class Test extends BaseTest {
 
 
     @org.testng.annotations.Test
-    public void TC3_placeAndConfirmOrderWithNewBillingDetails() throws InterruptedException {
+    public void TC3_placeAndConfirmOrderWithBrandNewEmail() throws InterruptedException {
         MacBook macBook = new MacBook(driver);
         macBook.clickOnMacBookProductImage();
         macBook.clickAddToCart();
@@ -105,7 +114,7 @@ public class Test extends BaseTest {
         macBook.selectCountry("Romania");
         Thread.sleep(1000);
         macBook.selectRegionState("Iasi");
-        Thread.sleep(5000);
+        Thread.sleep(4000);
 
 //        macBook.pressContinue();
 //        Thread.sleep(3000);
@@ -121,6 +130,6 @@ public class Test extends BaseTest {
 //        macBook.continueBackToHomePage();
 //        Thread.sleep(2000);
     }
-    //          Un DEMO ce arata doar introducerea  Datelor_de_Facturare  de la  Pasul_2, fara a avansa spre  Pasul_3_Metoda_de_Plata, deoarece apasand 'Continue'
-    // Datele_de_Facturare se vor salva automat drept Adresa_Implicita si nu o voi mai putea sterge pentru a rula testul din nou
+    // introduce Datele_de_Facturare fara a continua la Pasul 3
+
 }

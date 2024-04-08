@@ -5,17 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac633605-ff2d-4bd0-8be7-4966cc090856" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/HomePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/LoginInWithValidAccount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/BaseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/MacBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/MacBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,12 +47,14 @@
     "TestNG.Test.TC1_LoginSteps.executor": "Run",
     "TestNG.Test.TC2_addProductToCart.executor": "Run",
     "TestNG.Test.TC3_placeAndConfirmOrderWithExistingAddress.executor": "Run",
+    "TestNG.Test.TC3_placeAndConfirmOrderWithNewBillingDetails.executor": "Run",
     "TestNG.Test.TC4_changeCurrency.executor": "Run",
     "TestNG.Test.addCheckoutInfo.executor": "Run",
     "TestNG.Test.addProductToCart.executor": "Run",
     "TestNG.Test.changeCurrency.executor": "Run",
     "TestNG.Test.checkTitlePage.executor": "Run",
     "TestNG.Test.clickCheckout.executor": "Run",
+    "TestNG.Test.executor": "Run",
     "TestNG.Test.goToMacBook.executor": "Run",
     "TestNG.Test.goToMacBookPage.executor": "Run",
     "TestNG.Test.placeAndConfirmOrderWithExistingAddress.executor": "Run",
@@ -70,7 +64,7 @@
     "onboarding.tips.debug.path": "C:/Users/user/IdeaProjects/ProiectFinal/src/main/java/org/example/Main.java"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.Test.TC4_changeCurrency">
+  <component name="RunManager" selected="TestNG.Test.TC3_placeAndConfirmOrderWithExistingAddress">
     <configuration name="Test.TC1_LoginSteps" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ProiectFinal" />
       <option name="PACKAGE_NAME" value="" />
@@ -107,6 +101,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Test.TC3_placeAndConfirmOrderWithNewBillingDetails" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ProiectFinal" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Test" />
+      <option name="METHOD_NAME" value="TC3_placeAndConfirmOrderWithNewBillingDetails" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Test.TC4_changeCurrency" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ProiectFinal" />
       <option name="PACKAGE_NAME" value="" />
@@ -119,25 +125,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test.placeAndConfirmOrderWithNewBillingDetails" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="ProiectFinal" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Test" />
-      <option name="METHOD_NAME" value="placeAndConfirmOrderWithNewBillingDetails" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.Test.TC4_changeCurrency" />
         <item itemvalue="TestNG.Test.TC3_placeAndConfirmOrderWithExistingAddress" />
+        <item itemvalue="TestNG.Test.TC4_changeCurrency" />
+        <item itemvalue="TestNG.Test.TC3_placeAndConfirmOrderWithNewBillingDetails" />
         <item itemvalue="TestNG.Test.TC2_addProductToCart" />
         <item itemvalue="TestNG.Test.TC1_LoginSteps" />
-        <item itemvalue="TestNG.Test.placeAndConfirmOrderWithNewBillingDetails" />
       </list>
     </recent_temporary>
   </component>
