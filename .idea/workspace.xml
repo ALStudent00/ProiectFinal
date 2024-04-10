@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac633605-ff2d-4bd0-8be7-4966cc090856" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/SearchFunction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/MacBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/MacBook.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,6 +49,7 @@
     "TestNG.Test.TC3_placeAndConfirmOrderWithExistingAddress.executor": "Run",
     "TestNG.Test.TC3_placeAndConfirmOrderWithNewBillingDetails.executor": "Run",
     "TestNG.Test.TC4_changeCurrency.executor": "Run",
+    "TestNG.Test.TC5_searchFunction.executor": "Run",
     "TestNG.Test.addCheckoutInfo.executor": "Run",
     "TestNG.Test.addProductToCart.executor": "Run",
     "TestNG.Test.changeCurrency.executor": "Run",
@@ -59,6 +60,7 @@
     "TestNG.Test.goToMacBookPage.executor": "Run",
     "TestNG.Test.placeAndConfirmOrderWithExistingAddress.executor": "Run",
     "TestNG.Test.placeAndConfirmOrderWithNewBillingDetails.executor": "Run",
+    "TestNG.Test.verifySearchFunction.executor": "Run",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "onboarding.tips.debug.path": "C:/Users/user/IdeaProjects/ProiectFinal/src/main/java/org/example/Main.java"
@@ -70,18 +72,6 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="Test" />
       <option name="METHOD_NAME" value="TC1_LoginSteps" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Test.TC2_addProductToCart" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="ProiectFinal" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Test" />
-      <option name="METHOD_NAME" value="TC2_addProductToCart" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -101,18 +91,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test.TC3_placeAndConfirmOrderWithNewBillingDetails" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="ProiectFinal" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Test" />
-      <option name="METHOD_NAME" value="TC3_placeAndConfirmOrderWithNewBillingDetails" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Test.TC4_changeCurrency" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ProiectFinal" />
       <option name="PACKAGE_NAME" value="" />
@@ -125,13 +103,37 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Test.TC5_searchFunction" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ProiectFinal" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Test" />
+      <option name="METHOD_NAME" value="TC5_searchFunction" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test.verifySearchFunction" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ProiectFinal" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Test" />
+      <option name="METHOD_NAME" value="verifySearchFunction" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.Test.TC3_placeAndConfirmOrderWithExistingAddress" />
-        <item itemvalue="TestNG.Test.TC4_changeCurrency" />
-        <item itemvalue="TestNG.Test.TC3_placeAndConfirmOrderWithNewBillingDetails" />
-        <item itemvalue="TestNG.Test.TC2_addProductToCart" />
         <item itemvalue="TestNG.Test.TC1_LoginSteps" />
+        <item itemvalue="TestNG.Test.TC5_searchFunction" />
+        <item itemvalue="TestNG.Test.verifySearchFunction" />
+        <item itemvalue="TestNG.Test.TC4_changeCurrency" />
       </list>
     </recent_temporary>
   </component>

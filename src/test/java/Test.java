@@ -1,6 +1,8 @@
 import Pages.HomePage;
 import Pages.LoginInWithValidAccount;
 import Pages.MacBook;
+import Pages.SearchFunction;
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
 public class Test extends BaseTest {
@@ -69,12 +71,11 @@ public class Test extends BaseTest {
         Thread.sleep(1500);
         macBook.confirmOrder();
 
-//        macBook.clickUseNewAddress();
+//              // Selecteaza "I want to use new address" si arata doar introducerea  Datelor_de_Facturare  de la  Pasul_2, fara a avansa spre  Pasul_3_Metoda_de_Plata  macBook.clickUseNewAddress();
 //        macBook.insertBillingDetails("John","User","Internet","La bulevard","Iasi","1234");
 //        macBook.selectCountry("Romania");
 //        Thread.sleep(1000);
 //        macBook.selectRegionState("Iasi");
-        // Selecteaza "I want to use new address" si arata doar introducerea  Datelor_de_Facturare  de la  Pasul_2, fara a avansa spre  Pasul_3_Metoda_de_Plata
 
         Thread.sleep(3000);
 
@@ -93,43 +94,14 @@ public class Test extends BaseTest {
         homePage.scrollDownToFeatured();
         Thread.sleep(4000);
     }
-
-
-
-
     @org.testng.annotations.Test
-    public void TC3_placeAndConfirmOrderWithBrandNewEmail() throws InterruptedException {
-        MacBook macBook = new MacBook(driver);
-        macBook.clickOnMacBookProductImage();
-        macBook.clickAddToCart();
-        macBook.clickOnShoppingCart();
-        macBook.clickCheckout();
+    public void TC5_searchFunction() throws InterruptedException {
+        SearchFunction searchFunction = new SearchFunction(driver);
+        searchFunction.clickSearchButton("ipod");
         Thread.sleep(1000);
-        macBook.insertReturningCustomerCredentials("pass@pass.com", "pass");
-        Thread.sleep(1000);
-        macBook.LoginToCheckout();
-        macBook.scrollToStep2();
-        Thread.sleep(1000);
-        macBook.insertBillingDetails("John","User","Internet","La bulevard","Iasi","1234");
-        macBook.selectCountry("Romania");
-        Thread.sleep(1000);
-        macBook.selectRegionState("Iasi");
-        Thread.sleep(4000);
-
-//        macBook.pressContinue();
-//        Thread.sleep(3000);
-//        macBook.scrollToStep3();
-//        Thread.sleep(1500);
-//        macBook.selectTermsCheckbox();
-//        Thread.sleep(1500);
-//        macBook.continueToStep4();
-//        Thread.sleep(1500);
-//        macBook.confirmOrder();
-//        Thread.sleep(1500);
-
-//        macBook.continueBackToHomePage();
-//        Thread.sleep(2000);
+        searchFunction.scrollDowm();
+        searchFunction.verifySearchedProductPageTitle();
+        searchFunction.verifyNumberOfResults();
+        Thread.sleep(3000);
     }
-    // introduce Datele_de_Facturare fara a continua la Pasul 3
-
 }
