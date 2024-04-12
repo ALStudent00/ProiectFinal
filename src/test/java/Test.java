@@ -27,20 +27,24 @@ public class Test extends BaseTest {
     }
     @org.testng.annotations.Test
     public void TC2_addProductToCart() throws InterruptedException {
-        Thread.sleep(800);
+        Thread.sleep(500);
         MacBook macBook = new MacBook(driver);
         macBook.scrollDownToFeatured();
-        Thread.sleep(1500);
+        Thread.sleep(1000);
         macBook.clickOnMacBookProductImage();
         Thread.sleep(1000);
         System.out.println(macBook.verifyMacBookPageTitle());
         Assert.assertEquals(macBook.verifyMacBookPageTitle(), "MacBook");
         macBook.scrollDownToEmptySpace();
-        Thread.sleep(1000);
         macBook.clickAddToCart();
         Thread.sleep(3000);
-        macBook.clickOnShoppingCart();
-        Thread.sleep(4000);
+        System.out.println("Success: You have added MacBook to your shopping cart!");
+        macBook.clickToViewTotalItems();
+        Thread.sleep(2000);
+        macBook.clickOnViewCart();
+        Thread.sleep(3000);
+        System.out.println(macBook.verifyShoppingCartPageTitle());
+        Assert.assertEquals(macBook.verifyShoppingCartPageTitle(), "Shopping Cart");
     }
     @org.testng.annotations.Test
     public void TC3_placeAndConfirmOrderWithExistingAddress() throws InterruptedException {
@@ -52,8 +56,10 @@ public class Test extends BaseTest {
         macBook.scrollDownToEmptySpace();
         Thread.sleep(1000);
         macBook.clickAddToCart();
-        macBook.clickOnShoppingCart();
-        Thread.sleep(2000);
+        macBook.clickToViewTotalItems();
+        Thread.sleep(1500);
+        macBook.clickOnViewCart();
+        Thread.sleep(1500);
         macBook.clickCheckout();
         Thread.sleep(1000);
         macBook.insertReturningCustomerCredentials("Email@email.email", "meta");
@@ -79,6 +85,7 @@ public class Test extends BaseTest {
 //        macBook.selectRegionState("Iasi");
 
         Thread.sleep(3000);
+        macBook.verifyOrderPlacedSuccess();
 
 
 //        macBook.continueBackToHomePage();
@@ -87,22 +94,29 @@ public class Test extends BaseTest {
     @org.testng.annotations.Test
     public void TC4_changeCurrency() throws InterruptedException {
         HomePage homePage = new HomePage(driver);
-        Thread.sleep(500);
         homePage.scrollDownToFeatured();
-        Thread.sleep(2000);
+        Thread.sleep(1500);
+        homePage.clickOnMacBookProductImage();
+        Thread.sleep(1000);
         homePage.selectEuroCurrency();
         Thread.sleep(1500);
+        driver.navigate().to("https://opencart.abstracta.us/index.php?route=common/home");
         homePage.scrollDownToFeatured();
-        Thread.sleep(4000);
+        Thread.sleep(3000);
+        System.out.println("Currency has been changed, from $ US Dollar to € Euro");
     }
     @org.testng.annotations.Test
     public void TC5_searchFunction() throws InterruptedException {
         SearchFunction searchFunction = new SearchFunction(driver);
         searchFunction.clickSearchButton("ipod");
-        Thread.sleep(1000);
-        searchFunction.scrollDowm();
+        Thread.sleep(1500);
+        searchFunction.scrollDown();
         searchFunction.verifySearchedProductPageTitle();
         searchFunction.verifyNumberOfResults();
         Thread.sleep(3000);
     }
+
+
+
+    //    (nota personala)    driver.navigate().back();
 }

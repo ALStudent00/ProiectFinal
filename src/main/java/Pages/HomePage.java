@@ -22,4 +22,8 @@ public class HomePage {
         WebElement element = driver.findElement(By.xpath("//*[@id=\"content\"]/h3"));
         js.executeScript("arguments[0].scrollIntoView(true);", element);
     }
+    public void clickOnMacBookProductImage() {
+        WebElement macBook_text = driver.findElement(By.xpath("//*[@id=\"content\"]/div[2]/div[1]/div/div[1]/a/img"));
+        macBook_text.click();
+    }
 }

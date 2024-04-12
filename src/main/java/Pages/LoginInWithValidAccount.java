@@ -33,8 +33,8 @@ public class LoginInWithValidAccount {
     }
 
 
-//    public void clickLogout() {
-//        WebElement logout_button = driver.findElement(By.xpath("//*[@id=\"column-right\"]/div/a[13]"));
-//        logout_button.click();
-//    }
+    public void clickLogout() {
+        WebElement logout_button = driver.findElement(By.xpath("//*[@id=\"column-right\"]/div/a[13]"));
+        logout_button.click();
+    }
 }

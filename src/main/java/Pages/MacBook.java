@@ -33,9 +33,16 @@ public class MacBook {
         WebElement element = driver.findElement(By.className("container"));
         js.executeScript("arguments[0].scrollIntoView(true);", element);
     }
-    public void clickOnShoppingCart() {
-        WebElement viewCart = driver.findElement(By.cssSelector("i.fa.fa-shopping-cart"));
+    public void clickToViewTotalItems() {
+        WebElement viewTotalItems = driver.findElement(By.id("cart-total"));
+        viewTotalItems.click();
+    }
+    public void clickOnViewCart() {
+        WebElement viewCart = driver.findElement(By.xpath("//*[@id=\"cart\"]/ul/li[2]/div/p/a[1]/strong"));
         viewCart.click();
+    }
+    public String verifyShoppingCartPageTitle() {
+        return driver.getTitle();
     }
     public void clickCheckout() {
         WebElement Checkout_button = driver.findElement(By.cssSelector("a.btn.btn-primary"));
@@ -105,12 +112,18 @@ public class MacBook {
         WebElement confirmOrder_button = driver.findElement(By.id("button-confirm"));
         confirmOrder_button.click();
     }
+    public void verifyOrderPlacedSuccess() {
+        WebElement successfulOrder_page = driver.findElement(By.xpath("//*[@id=\"content\"]/h1"));
+        String successMessage = successfulOrder_page.getText();
+        System.out.println(successMessage);
+        assert successMessage.equals("Your order has been placed!");
+    }
+
 
     public void clickUseNewAddress() {
         WebElement newAddress_button = driver.findElement(By.xpath("//*[@id=\"collapse-payment-address\"]/div/form/div[3]/label/input"));
         newAddress_button.click();
     }
-
 
 
     public void continueBackToHomePage() {

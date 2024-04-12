@@ -19,20 +19,20 @@ public class SearchFunction {
         search_button.click();
     }
     public void verifySearchedProductPageTitle() {
-        WebElement pageSearchIpod = driver.findElement(By.xpath("//*[@id=\"content\"]/h1"));
-        String titlePage = pageSearchIpod.getText();
+        WebElement ipodSearch_page = driver.findElement(By.xpath("//*[@id=\"content\"]/h1"));
+        String titlePage = ipodSearch_page.getText();
         System.out.println(titlePage);
         assert titlePage.equals("Search - ipod");
     }
-    public void scrollDowm() {
+    public void scrollDown() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         WebElement element = driver.findElement(By.className("checkbox-inline"));
         js.executeScript("arguments[0].scrollIntoView(true);", element);
     }
     public void verifyNumberOfResults() {
-        List<WebElement> numberOfProducts = driver.findElements(By.className("product-thumb"));
-        if (numberOfProducts.size() > 1) {
-            System.out.println(numberOfProducts.size() + " rezultate");
+        List<WebElement> numberOfProductsFound = driver.findElements(By.className("product-thumb"));
+        if (numberOfProductsFound.size() > 1) {
+            System.out.println(numberOfProductsFound.size() + " rezultate");
         } else assert false;
     }
 }
