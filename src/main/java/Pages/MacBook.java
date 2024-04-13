@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 public class MacBook {
@@ -28,6 +29,11 @@ public class MacBook {
         WebElement addToCart_button = driver.findElement(By.id("button-cart"));
         addToCart_button.click();
     }
+    public void highlightSuccessMessage() {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        WebElement success_alert = driver.findElement(By.xpath("//*[@id=\"product-product\"]/div[1]"));
+        js.executeScript("arguments[0].style.border='5px dotted green'", success_alert);
+    }
     public void scrollDownToEmptySpace() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         WebElement element = driver.findElement(By.className("container"));
@@ -37,9 +43,16 @@ public class MacBook {
         WebElement viewTotalItems = driver.findElement(By.id("cart-total"));
         viewTotalItems.click();
     }
-    public void clickOnViewCart() {
+    public void hoverClickOnViewCart() {
+        Actions action = new Actions(driver);
         WebElement viewCart = driver.findElement(By.xpath("//*[@id=\"cart\"]/ul/li[2]/div/p/a[1]/strong"));
-        viewCart.click();
+        action.moveToElement(viewCart);
+        action.moveToElement(driver.findElement(By.xpath("//*[@id=\"cart\"]/ul/li[2]/div/p/a[1]/strong"))).click().build().perform();
+    }
+    public void highlightProductInCart() {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        WebElement product = driver.findElement(By.xpath("//*[@id=\"content\"]/form/div/table"));
+        js.executeScript("arguments[0].style.border='4px dashed green'", product);
     }
     public String verifyShoppingCartPageTitle() {
         return driver.getTitle();
@@ -48,15 +61,27 @@ public class MacBook {
         WebElement Checkout_button = driver.findElement(By.cssSelector("a.btn.btn-primary"));
         Checkout_button.click();
     }
+    public void highlightReturningCustomerCredentials() {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        WebElement credentials = driver.findElement(By.xpath("//*[@id=\"collapse-checkout-option\"]/div/div/div[2]"));
+        js.executeScript("arguments[0].style.border='2px solid yellow'", credentials);
+    }
     public void insertReturningCustomerCredentials(String email, String password) {
         WebElement insert_email = driver.findElement(By.name("email"));
         WebElement insert_password = driver.findElement(By.name("password"));
         insert_email.sendKeys(email);
         insert_password.sendKeys(password);
     }
-    public void LoginToCheckout() {
+    public void highlightValidCredentials() {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        WebElement credentials = driver.findElement(By.xpath("//*[@id=\"collapse-checkout-option\"]/div/div/div[2]"));
+        js.executeScript("arguments[0].style.border='3px dotted green'", credentials);
+    }
+    public void hoverClickLoginToCheckout() {
+        Actions action = new Actions(driver);
         WebElement login_button = driver.findElement(By.id("button-login"));
-        login_button.click();
+        action.moveToElement(login_button);
+        action.moveToElement(driver.findElement(By.id("button-login"))).click().build().perform();
     }
     public void scrollToStep2() {
         JavascriptExecutor js = (JavascriptExecutor) driver;

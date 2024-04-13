@@ -1,8 +1,12 @@
 package Pages;
 
+import org.checkerframework.checker.units.qual.A;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.bidi.log.Log;
+import org.openqa.selenium.interactions.Actions;
 
 public class LoginInWithValidAccount {
     private WebDriver driver;
@@ -13,8 +17,12 @@ public class LoginInWithValidAccount {
     public void clickMyAccountLogin() {
         WebElement myAccount = driver.findElement(By.cssSelector("i.fa.fa-user"));
         myAccount.click();
+    }
+    public void hoverClick_Login() {
+        Actions action = new Actions(driver);
         WebElement Login = driver.findElement(By.xpath("//*[@id=\"top-links\"]/ul/li[2]/ul/li[2]/a"));
-        Login.click();
+        action.moveToElement(Login);
+        action.moveToElement(driver.findElement(By.xpath("//*[@id=\"top-links\"]/ul/li[2]/ul/li[2]/a"))).click().build().perform();
     }
     public void insertEmail(String email) {
         WebElement email_locator = driver.findElement(By.name("email"));
@@ -27,6 +35,11 @@ public class LoginInWithValidAccount {
     public void clickLogin() {
         WebElement login_button = driver.findElement(By.xpath("//*[@id=\"content\"]/div/div[2]/div/form/input"));
         login_button.click();
+    }
+    public void highlightMyAccount() {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        WebElement myAccount_title = driver.findElement(By.xpath("//*[@id=\"content\"]/h2[1]"));
+        js.executeScript("arguments[0].style.border='3px double green'", myAccount_title);
     }
     public String verifyMyAccountPageTitle() {
         return driver.getTitle();
