@@ -9,10 +9,7 @@ public class Test extends BaseTest {
     @org.testng.annotations.Test
     public void TC1_LoginSteps() throws InterruptedException {
         LoginInWithValidAccount loginInWithValidAccount = new LoginInWithValidAccount(driver);
-        LoginInWithValidAccount myAccount_button = new LoginInWithValidAccount(driver);
-        myAccount_button.clickMyAccountLogin();
-        LoginInWithValidAccount Login_Button = new LoginInWithValidAccount(driver);
-        Login_Button.clickMyAccountLogin();
+        loginInWithValidAccount.clickMyAccountLogin();
         Thread.sleep(1000);
         loginInWithValidAccount.insertEmail("Email@email.email");
         Thread.sleep(1000);
@@ -56,6 +53,7 @@ public class Test extends BaseTest {
         macBook.scrollDownToEmptySpace();
         Thread.sleep(1000);
         macBook.clickAddToCart();
+        Thread.sleep(1000);
         macBook.clickToViewTotalItems();
         Thread.sleep(1500);
         macBook.clickOnViewCart();

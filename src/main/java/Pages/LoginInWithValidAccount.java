@@ -13,7 +13,7 @@ public class LoginInWithValidAccount {
     public void clickMyAccountLogin() {
         WebElement myAccount = driver.findElement(By.cssSelector("i.fa.fa-user"));
         myAccount.click();
-        WebElement  Login = driver.findElement(By.xpath("//*[@id=\"top-links\"]/ul/li[2]/ul/li[2]/a"));
+        WebElement Login = driver.findElement(By.xpath("//*[@id=\"top-links\"]/ul/li[2]/ul/li[2]/a"));
         Login.click();
     }
     public void insertEmail(String email) {
