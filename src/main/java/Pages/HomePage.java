@@ -15,7 +15,7 @@ public class HomePage {
     public HomePage(WebDriver driver) {
         this.driver = driver;
     }
-    public void highlightPricesYellow() {
+    public void highlightDollarPrices() {
         // Evidentiaza preturile
         JavascriptExecutor js = (JavascriptExecutor) driver;
         WebElement price = driver.findElement(By.className("price"));
@@ -27,7 +27,7 @@ public class HomePage {
         js.executeScript("arguments[0].style.border='5px dotted yellow'", price3);
         js.executeScript("arguments[0].style.border='5px dotted yellow'", price4);
     }
-    public void highlightMacBookPriceYellow() {
+    public void highlightMacBookPriceInDollar() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         WebElement macbook_price = driver.findElement(By.xpath("//*[@id=\"content\"]/div/div[2]/ul[2]/li[1]/h2"));
         js.executeScript("arguments[0].style.border='5px dotted yellow'", macbook_price);
@@ -47,7 +47,7 @@ public class HomePage {
 //        Actions builder = new Actions(driver);
 //        builder.moveToElement(euroCurrency).build().perform();
     }
-    public void highlightMacBookPriceGreen() {
+    public void highlightMacBookPriceInEuro() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         WebElement macbook_price = driver.findElement(By.xpath("//*[@id=\"content\"]/div/div[2]/ul[2]/li[1]/h2"));
         js.executeScript("arguments[0].style.border='5px dotted green'", macbook_price);
@@ -57,22 +57,22 @@ public class HomePage {
         WebElement element = driver.findElement(By.xpath("//*[@id=\"content\"]/h3"));
         js.executeScript("arguments[0].scrollIntoView(true);", element);
     }
-    public void highlightPrice1Green() {
+    public void highlightEuroPrice1() {
         JavascriptExecutor js =(JavascriptExecutor)driver;
         WebElement price1 = driver.findElement(By.className("price"));
         js.executeScript("arguments[0].style.border='1.8px dashed green'", price1);
     }
-    public void highlightPrice2Green() {
+    public void highlightEuroPrice2() {
         JavascriptExecutor js =(JavascriptExecutor)driver;
         WebElement price2 = driver.findElement(By.xpath("//*[@id=\"content\"]/div[2]/div[2]/div/div[2]/p[2]"));
         js.executeScript("arguments[0].style.border='1.8px dashed green'", price2);
     }
-    public void highlightPrice3Green() {
+    public void highlightEuroPrice3() {
         JavascriptExecutor js =(JavascriptExecutor)driver;
         WebElement price3 = driver.findElement(By.xpath("//*[@id=\"content\"]/div[2]/div[3]/div/div[2]/p[2]"));
         js.executeScript("arguments[0].style.border='1.8px dashed green'", price3);
     }
-    public void highlightPrice4Green() {
+    public void highlightEuroPrice4() {
         JavascriptExecutor js =(JavascriptExecutor)driver;
         WebElement price4 = driver.findElement(By.xpath("//*[@id=\"content\"]/div[2]/div[4]/div/div[2]/p[2]"));
         js.executeScript("arguments[0].style.border='1.8px dashed green'", price4);

@@ -104,27 +104,27 @@ public class Test extends BaseTest {
         HomePage homePage = new HomePage(driver);
         homePage.scrollDownToFeatured();
         Thread.sleep(500);
-        homePage.highlightPricesYellow();
+        homePage.highlightDollarPrices();
         Thread.sleep(1500);
         homePage.clickOnMacBookProductImage();
-        homePage.highlightMacBookPriceYellow();
+        homePage.highlightMacBookPriceInDollar();
         Thread.sleep(1000);
         homePage.clickDropDownArrow();
         Thread.sleep(1200);
         homePage.hoverSelectEuroCurrency();
-        homePage.highlightMacBookPriceGreen();
+        homePage.highlightMacBookPriceInEuro();
         Thread.sleep(1500);
         driver.navigate().to("https://opencart.abstracta.us/index.php?route=common/home");
         homePage.scrollDownToFeatured();
         Thread.sleep(500);
-        homePage.highlightPrice1Green();
+        homePage.highlightEuroPrice1();
         Thread.sleep(300);
-        homePage.highlightPrice2Green();
+        homePage.highlightEuroPrice2();
         Thread.sleep(300);
-        homePage.highlightPrice3Green();
+        homePage.highlightEuroPrice3();
         Thread.sleep(300);
-        homePage.highlightPrice4Green();
-        Thread.sleep(3000);
+        homePage.highlightEuroPrice4();
+        Thread.sleep(2500);
         System.out.println("Currency has been changed, from $ US Dollar to € Euro");
     }
     @org.testng.annotations.Test
