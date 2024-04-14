@@ -56,9 +56,17 @@ public class MacBook {
     public String verifyShoppingCartPageTitle() {
         return driver.getTitle();
     }
-    public void clickCheckout() {
+    public void scrollToUseGift() {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        WebElement element = driver.findElement(By.xpath("//*[@id=\"content\"]/h1"));
+        js.executeScript("arguments[0].scrollIntoView(true);", element);
+    }
+    public void hoverClickCheckout() {
+        Actions action = new Actions(driver);
         WebElement Checkout_button = driver.findElement(By.cssSelector("a.btn.btn-primary"));
-        Checkout_button.click();
+        action.moveToElement(Checkout_button);
+        action.moveToElement(driver.findElement(By.cssSelector("a.btn.btn-primary"))).click().build().perform();
+
     }
     public void highlightReturningCustomerCredentials() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -132,9 +140,11 @@ public class MacBook {
         WebElement continueToStep4_button = driver.findElement(By.id("button-payment-method"));
         continueToStep4_button.click();
     }
-    public void confirmOrder() {
+    public void hoverClickConfirmOrder() {
+        Actions action = new Actions(driver);
         WebElement confirmOrder_button = driver.findElement(By.id("button-confirm"));
-        confirmOrder_button.click();
+        action.moveToElement(confirmOrder_button);
+        action.moveToElement(driver.findElement(By.id("button-confirm"))).click().build().perform();
     }
     public void verifyOrderPlacedSuccess() {
         WebElement successfulOrder_page = driver.findElement(By.xpath("//*[@id=\"content\"]/h1"));

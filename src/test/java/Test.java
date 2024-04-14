@@ -64,7 +64,9 @@ public class Test extends BaseTest {
         Thread.sleep(1200);
         macBook.hoverClickOnViewCart();
         Thread.sleep(1200);
-        macBook.clickCheckout();
+        macBook.scrollToUseGift();
+        Thread.sleep(500);
+        macBook.hoverClickCheckout();
         Thread.sleep(1000);
         macBook.highlightReturningCustomerCredentials();
         Thread.sleep(500);
@@ -83,7 +85,7 @@ public class Test extends BaseTest {
         Thread.sleep(1000);
         macBook.continueToStep4();
         Thread.sleep(1500);
-        macBook.confirmOrder();
+        macBook.hoverClickConfirmOrder();
 
 //              // Selecteaza "I want to use new address" si arata doar introducerea  Datelor_de_Facturare  de la  Pasul_2, fara a avansa spre  Pasul_3_Metoda_de_Plata
 //        macBook.clickUseNewAddress();
