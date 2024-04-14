@@ -51,7 +51,7 @@ public class Test extends BaseTest {
         System.out.println("Success: You have added MacBook to your shopping cart!");
     }
     @org.testng.annotations.Test
-    public void TC3_placeAndConfirmOrderWithExistingAddress() throws InterruptedException {
+    public void TC3_placeAndConfirmOrder() throws InterruptedException {
         MacBook macBook = new MacBook(driver);
         Thread.sleep(500);
         macBook.scrollDownToFeatured();
