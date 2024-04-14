@@ -13,9 +13,11 @@ public class MacBook {
     public MacBook(WebDriver driver) {
         this.driver = driver;
     }
-    public void clickOnMacBookProductImage() {
+    public void hoverClickOnMacBookProductImage() {
+        Actions action = new Actions(driver);
         WebElement macBook_text = driver.findElement(By.xpath("//*[@id=\"content\"]/div[2]/div[1]/div/div[1]/a/img"));
-        macBook_text.click();
+        action.moveToElement(macBook_text);
+        action.moveToElement(driver.findElement(By.xpath("//*[@id=\"content\"]/div[2]/div[1]/div/div[1]/a/img"))).click().build().perform();
     }
     public String verifyMacBookPageTitle() {
         return driver.getTitle();
@@ -25,19 +27,16 @@ public class MacBook {
         WebElement element = driver.findElement(By.xpath("//*[@id=\"content\"]/h3"));
         js.executeScript("arguments[0].scrollIntoView(true);", element);
     }
-    public void clickAddToCart() {
+    public void hoverClickAddToCart() {
+        Actions action = new Actions(driver);
         WebElement addToCart_button = driver.findElement(By.id("button-cart"));
-        addToCart_button.click();
+        action.moveToElement(addToCart_button);
+        action.moveToElement(driver.findElement(By.id("button-cart"))).click().build().perform();
     }
     public void highlightSuccessMessage() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         WebElement success_alert = driver.findElement(By.xpath("//*[@id=\"product-product\"]/div[1]"));
         js.executeScript("arguments[0].style.border='5px dotted green'", success_alert);
-    }
-    public void scrollDownToEmptySpace() {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        WebElement element = driver.findElement(By.className("container"));
-        js.executeScript("arguments[0].scrollIntoView(true);", element);
     }
     public void clickToViewTotalItems() {
         WebElement viewTotalItems = driver.findElement(By.id("cart-total"));

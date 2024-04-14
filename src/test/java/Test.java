@@ -32,12 +32,11 @@ public class Test extends BaseTest {
         MacBook macBook = new MacBook(driver);
         macBook.scrollDownToFeatured();
         Thread.sleep(1000);
-        macBook.clickOnMacBookProductImage();
+        macBook.hoverClickOnMacBookProductImage();
         Thread.sleep(1000);
         System.out.println(macBook.verifyMacBookPageTitle());
         Assert.assertEquals(macBook.verifyMacBookPageTitle(), "MacBook");
-        macBook.scrollDownToEmptySpace();
-        macBook.clickAddToCart();
+        macBook.hoverClickAddToCart();
         Thread.sleep(500);
         macBook.highlightSuccessMessage();
         Thread.sleep(2000);
@@ -57,10 +56,9 @@ public class Test extends BaseTest {
         Thread.sleep(500);
         macBook.scrollDownToFeatured();
         Thread.sleep(500);
-        macBook.clickOnMacBookProductImage();
-        macBook.scrollDownToEmptySpace();
+        macBook.hoverClickOnMacBookProductImage();
         Thread.sleep(1000);
-        macBook.clickAddToCart();
+        macBook.hoverClickAddToCart();
         Thread.sleep(1000);
         macBook.clickToViewTotalItems();
         Thread.sleep(1200);
@@ -69,9 +67,11 @@ public class Test extends BaseTest {
         macBook.clickCheckout();
         Thread.sleep(1000);
         macBook.highlightReturningCustomerCredentials();
+        Thread.sleep(500);
         macBook.insertReturningCustomerCredentials("Email@email.email", "meta");
+        Thread.sleep(300);
         macBook.highlightValidCredentials();
-        Thread.sleep(1200);
+        Thread.sleep(1000);
         macBook.hoverClickLoginToCheckout();
         macBook.scrollToStep2();
         Thread.sleep(2000);
@@ -153,5 +153,5 @@ public class Test extends BaseTest {
 
 
 
-    //    (nota personala)    driver.navigate().back();
+    //    (press browser Back button)    driver.navigate().back();
 }
