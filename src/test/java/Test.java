@@ -70,8 +70,10 @@ public class Test extends BaseTest {
 // Selecteaza "I want to use new address" si arata doar introducerea  Datelor_de_Facturare  de la  Pasul_2, fara a avansa spre  Pasul_3_Metoda_de_Plata
 //        macBook.selectUseNewAddress();
 //        macBook.insertBillingDetails("John","User","Internet","La bulevard","Iasi","1234");
-//        macBook.selectCountry("Romania");   Thread.sleep(1000);
-//        macBook.selectRegionState("Iasi");             Thread.sleep(2500);
+        macBook.selectCountry("Romania");
+            Thread.sleep(1000);
+        macBook.selectRegionState("Iasi");
+            Thread.sleep(2500);
 
 
 //        macBook.continueBackToHomePage();
