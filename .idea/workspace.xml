@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ac633605-ff2d-4bd0-8be7-4966cc090856" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/MacBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/MacBook.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,6 +46,7 @@
     &quot;TestNG.Test.LoginSteps.executor&quot;: &quot;Run&quot;,
     &quot;TestNG.Test.TC1_LoginSteps.executor&quot;: &quot;Run&quot;,
     &quot;TestNG.Test.TC2_addProductToCart.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Test.TC3_placeAndConfirmOrder.executor&quot;: &quot;Run&quot;,
     &quot;TestNG.Test.TC3_placeAndConfirmOrderWithExistingAddress.executor&quot;: &quot;Run&quot;,
     &quot;TestNG.Test.TC3_placeAndConfirmOrderWithNewBillingDetails.executor&quot;: &quot;Run&quot;,
     &quot;TestNG.Test.TC4_changeCurrency.executor&quot;: &quot;Run&quot;,
@@ -65,7 +67,7 @@
     &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/user/IdeaProjects/ProiectFinal/src/main/java/org/example/Main.java&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.Test.TC5_searchFunction">
+  <component name="RunManager" selected="TestNG.Test.TC3_placeAndConfirmOrder">
     <configuration name="Test.TC1_LoginSteps" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ProiectFinal" />
       <option name="PACKAGE_NAME" value="" />
@@ -90,11 +92,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test.TC3_placeAndConfirmOrderWithExistingAddress" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Test.TC3_placeAndConfirmOrder" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ProiectFinal" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="Test" />
-      <option name="METHOD_NAME" value="TC3_placeAndConfirmOrderWithExistingAddress" />
+      <option name="METHOD_NAME" value="TC3_placeAndConfirmOrder" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -128,10 +130,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.Test.TC3_placeAndConfirmOrder" />
+        <item itemvalue="TestNG.Test.TC2_addProductToCart" />
         <item itemvalue="TestNG.Test.TC5_searchFunction" />
         <item itemvalue="TestNG.Test.TC4_changeCurrency" />
-        <item itemvalue="TestNG.Test.TC3_placeAndConfirmOrderWithExistingAddress" />
-        <item itemvalue="TestNG.Test.TC2_addProductToCart" />
         <item itemvalue="TestNG.Test.TC1_LoginSteps" />
       </list>
     </recent_temporary>

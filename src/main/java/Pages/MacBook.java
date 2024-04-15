@@ -96,8 +96,10 @@ public class MacBook {
         js.executeScript("arguments[0].scrollIntoView(true);", element);
     }
     public void continueUsingExistingAddress() {
+        Actions action = new Actions(driver);
         WebElement continue_button = driver.findElement(By.id("button-payment-address"));
-        continue_button.click();
+        action.moveToElement(continue_button);
+        action.moveToElement(driver.findElement(By.id("button-payment-address"))).click().build().perform();
     }
     public void insertBillingDetails(String firstName, String lastName, String company, String address1, String city, String postCode) {
         WebElement firstName_locator = driver.findElement(By.name("firstname"));
@@ -154,7 +156,7 @@ public class MacBook {
     }
 
 
-    public void clickUseNewAddress() {
+    public void selectUseNewAddress() {
         WebElement newAddress_button = driver.findElement(By.xpath("//*[@id=\"collapse-payment-address\"]/div/form/div[3]/label/input"));
         newAddress_button.click();
     }
