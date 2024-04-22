@@ -5,11 +5,14 @@ import Pages.SearchFunction;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
+import java.time.Duration;
+
 public class Test extends BaseTest {
     @org.testng.annotations.Test
     public void TC1_LoginSteps() throws InterruptedException
     {
         LoginInWithValidAccount loginInWithValidAccount = new LoginInWithValidAccount(driver);
+    //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         loginInWithValidAccount.clickMyAccountLogin();
             Thread.sleep(1000);
         loginInWithValidAccount.hoverClick_Login();
