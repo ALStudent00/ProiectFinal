@@ -142,6 +142,14 @@ public class MacBook {
         WebElement continueToStep4_button = driver.findElement(By.id("button-payment-method"));
         continueToStep4_button.click();
     }
+    public void continueToStep5() {
+        WebElement continueToStep4_button = driver.findElement(By.id("button-shipping-method"));
+        continueToStep4_button.click();
+    }
+    public void continueToStep6() {
+        WebElement continueToStep6_button = driver.findElement(By.id("button-payment-method"));
+        continueToStep6_button.click();
+    }
     public void hoverClickConfirmOrder() {
         Actions action = new Actions(driver);
         WebElement confirmOrder_button = driver.findElement(By.id("button-confirm"));

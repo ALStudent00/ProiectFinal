@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ac633605-ff2d-4bd0-8be7-4966cc090856" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/MacBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/MacBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,7 +68,7 @@
     &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/user/IdeaProjects/ProiectFinal/src/main/java/org/example/Main.java&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.Test.TC5_searchFunction">
+  <component name="RunManager" selected="TestNG.Test.TC1_LoginSteps">
     <configuration name="Test.TC1_LoginSteps" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ProiectFinal" />
       <option name="PACKAGE_NAME" value="" />
@@ -130,11 +131,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.Test.TC1_LoginSteps" />
+        <item itemvalue="TestNG.Test.TC2_addProductToCart" />
         <item itemvalue="TestNG.Test.TC5_searchFunction" />
         <item itemvalue="TestNG.Test.TC4_changeCurrency" />
         <item itemvalue="TestNG.Test.TC3_placeAndConfirmOrder" />
-        <item itemvalue="TestNG.Test.TC2_addProductToCart" />
-        <item itemvalue="TestNG.Test.TC1_LoginSteps" />
       </list>
     </recent_temporary>
   </component>
