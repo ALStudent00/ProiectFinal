@@ -35,6 +35,7 @@ public class Test extends BaseTest {
     public void TC2_addProductToCart() throws InterruptedException
     {
         MacBook macBook = new MacBook(driver);
+            Thread.sleep(500);
         macBook.scrollDownToFeatured();
             Thread.sleep(700);
         macBook.hoverClickOnMacBookProductImage();
