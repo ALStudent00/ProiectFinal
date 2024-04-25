@@ -30,9 +30,9 @@ public class SearchFunction {
     }
     public void verifySearchedProductPageTitle() {
         WebElement ipodSearch_page = driver.findElement(By.xpath("//*[@id=\"content\"]/h1"));
-        String titlePage = ipodSearch_page.getText();
-        System.out.println(titlePage);
-        assert titlePage.equals("Search - ipod");
+        String pageTitle = ipodSearch_page.getText();
+        System.out.println(pageTitle);
+        assert pageTitle.equals("Search - ipod");
     }
     public void scrollDown() {
         JavascriptExecutor js = (JavascriptExecutor) driver;

@@ -1,11 +1,9 @@
 package Pages;
 
-import org.checkerframework.checker.units.qual.A;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.bidi.log.Log;
 import org.openqa.selenium.interactions.Actions;
 
 public class LoginInWithValidAccount {
@@ -32,9 +30,11 @@ public class LoginInWithValidAccount {
         WebElement password_locator = driver.findElement(By.name("password"));
         password_locator.sendKeys(password);
     }
-    public void clickLogin() {
+    public void hoverClickLogin() {
+        Actions action = new Actions(driver);
         WebElement login_button = driver.findElement(By.xpath("//*[@id=\"content\"]/div/div[2]/div/form/input"));
-        login_button.click();
+        action.moveToElement(login_button);
+        action.moveToElement(driver.findElement(By.xpath("//*[@id=\"content\"]/div/div[2]/div/form/input"))).click().build().perform();
     }
     public void highlightMyAccount() {
         JavascriptExecutor js = (JavascriptExecutor) driver;

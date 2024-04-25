@@ -2,7 +2,6 @@ import Pages.HomePage;
 import Pages.LoginInWithValidAccount;
 import Pages.MacBook;
 import Pages.SearchFunction;
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
 import java.time.Duration;
@@ -17,11 +16,12 @@ public class Test extends BaseTest {
         loginInWithValidAccount.clickMyAccountLogin();
             Thread.sleep(1000);
         loginInWithValidAccount.hoverClick_Login();
-            Thread.sleep(1000);
+            Thread.sleep(500);
         loginInWithValidAccount.insertEmail("Email@email.email");
-            Thread.sleep(1000);
+            Thread.sleep(500);
         loginInWithValidAccount.insertPassword("meta");
-        loginInWithValidAccount.clickLogin();
+            Thread.sleep(500);
+        loginInWithValidAccount.hoverClickLogin();
             Thread.sleep(700);
         loginInWithValidAccount.highlightMyAccount();
             Thread.sleep(2000);
@@ -75,6 +75,7 @@ public class Test extends BaseTest {
         macBook.highlightReturningCustomerCredentials();
         macBook.insertReturningCustomerCredentials("Email@email.email", "meta");
         macBook.highlightValidCredentials();
+            Thread.sleep(500);
         macBook.hoverClickLoginToCheckout();
         macBook.scrollToStep2();
             Thread.sleep(2000);
