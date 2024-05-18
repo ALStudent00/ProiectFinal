@@ -38,6 +38,12 @@ public class MacBook {
         WebElement success_alert = driver.findElement(By.xpath("//*[@id=\"product-product\"]/div[1]"));
         js.executeScript("arguments[0].style.border='5px dotted green'", success_alert);
     }
+    public void hoverClickOnShoppingCart() {
+        Actions action = new Actions(driver);
+        WebElement viewShpCart = driver.findElement(By.cssSelector("i.fa.fa-shopping-cart"));
+        action.moveToElement(viewShpCart);
+        action.moveToElement(driver.findElement(By.cssSelector("i.fa.fa-shopping-cart"))).click().build().perform();
+    }
     public void clickToViewTotalItems() {
         WebElement viewTotalItems = driver.findElement(By.id("cart-total"));
         viewTotalItems.click();

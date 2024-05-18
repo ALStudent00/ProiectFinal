@@ -4,7 +4,6 @@ import Pages.MacBook;
 import Pages.SearchFunction;
 import org.testng.Assert;
 
-import java.time.Duration;
 
 public class Test extends BaseTest {
     @org.testng.annotations.Test
@@ -46,9 +45,7 @@ public class Test extends BaseTest {
             Thread.sleep(1000);
         macBook.highlightSuccessMessage();
             Thread.sleep(2000);
-        macBook.clickToViewTotalItems();
-            Thread.sleep(1500);
-        macBook.hoverClickOnViewCart();
+        macBook.hoverClickOnShoppingCart();
             Thread.sleep(1000);
         macBook.highlightProductInCart();
             Thread.sleep(2000);
@@ -160,5 +157,4 @@ public class Test extends BaseTest {
 
 
 
-    //    (browser: press Back button)    driver.navigate().back();
 }

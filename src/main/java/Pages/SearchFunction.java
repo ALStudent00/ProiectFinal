@@ -64,5 +64,8 @@ public class SearchFunction {
         if (numberOfProductsFound.size() > 1) {
             System.out.println(numberOfProductsFound.size() + " rezultate");
         } else assert false;
+
+
+        //    (browser: press Back button)    driver.navigate().back();
     }
 }
