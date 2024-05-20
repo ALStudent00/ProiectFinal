@@ -22,6 +22,11 @@ public class LoginInWithValidAccount {
         action.moveToElement(Login);
         action.moveToElement(driver.findElement(By.xpath("//*[@id=\"top-links\"]/ul/li[2]/ul/li[2]/a"))).click().build().perform();
     }
+    public void highlightCredFields() {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        WebElement credFields = driver.findElement(By.xpath("//*[@id=\"content\"]/div/div[2]/div"));
+        js.executeScript("arguments[0].style.border='3px double turquoise'", credFields);
+    }
     public void insertEmail(String email) {
         WebElement email_locator = driver.findElement(By.name("email"));
         email_locator.sendKeys(email);

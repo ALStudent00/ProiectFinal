@@ -13,6 +13,11 @@ public class SearchFunction {
     public SearchFunction(WebDriver driver) {
         this.driver = driver;
     }
+    public void highlightSearchField() {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        WebElement searchField = driver.findElement(By.name("search"));
+        js.executeScript("arguments[0].style.border='3px double turquoise'", searchField);
+    }
     public void enterSearchTextInput(String productName) {
         WebElement searchInput = driver.findElement(By.name("search"));
         searchInput.sendKeys(productName);
@@ -62,7 +67,7 @@ public class SearchFunction {
     public void countProductResults() {
         List<WebElement> numberOfProductsFound = driver.findElements(By.className("product-thumb"));
         if (numberOfProductsFound.size() > 1) {
-            System.out.println(numberOfProductsFound.size() + " rezultate");
+            System.out.println(numberOfProductsFound.size() + " results");
         } else assert false;
 
 

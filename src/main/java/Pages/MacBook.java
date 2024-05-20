@@ -38,6 +38,11 @@ public class MacBook {
         WebElement success_alert = driver.findElement(By.xpath("//*[@id=\"product-product\"]/div[1]"));
         js.executeScript("arguments[0].style.border='5px dotted green'", success_alert);
     }
+    public void highlightShppCart() {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        WebElement shppCart = driver.findElement(By.xpath("//*[@id=\"top-links\"]/ul/li[4]"));
+        js.executeScript("arguments[0].style.border='5px double turquoise'", shppCart);
+    }
     public void hoverClickOnShoppingCart() {
         Actions action = new Actions(driver);
         WebElement viewShpCart = driver.findElement(By.cssSelector("i.fa.fa-shopping-cart"));
@@ -173,11 +178,5 @@ public class MacBook {
     public void selectUseNewAddress() {
         WebElement newAddress_button = driver.findElement(By.xpath("//*[@id=\"collapse-payment-address\"]/div/form/div[3]/label/input"));
         newAddress_button.click();
-    }
-
-
-    public void continueBackToHomePage() {
-        WebElement continueToHomePage_button = driver.findElement(By.cssSelector("a.btn.btn-primary"));
-        continueToHomePage_button.click();
     }
 }

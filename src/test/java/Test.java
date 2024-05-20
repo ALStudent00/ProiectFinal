@@ -16,6 +16,7 @@ public class Test extends BaseTest {
             Thread.sleep(1000);
         loginInWithValidAccount.hoverClick_Login();
             Thread.sleep(500);
+        loginInWithValidAccount.highlightCredFields();
         loginInWithValidAccount.insertEmail("Email@email.email");
             Thread.sleep(500);
         loginInWithValidAccount.insertPassword("meta");
@@ -44,9 +45,11 @@ public class Test extends BaseTest {
         macBook.hoverClickAddToCart();
             Thread.sleep(1000);
         macBook.highlightSuccessMessage();
-            Thread.sleep(2000);
-        macBook.hoverClickOnShoppingCart();
             Thread.sleep(1000);
+        macBook.highlightShppCart();
+            Thread.sleep(1000);
+        macBook.hoverClickOnShoppingCart();
+            Thread.sleep(500);
         macBook.highlightProductInCart();
             Thread.sleep(2000);
         System.out.println(macBook.verifyShoppingCartPageTitle());
@@ -96,10 +99,6 @@ public class Test extends BaseTest {
 //            Thread.sleep(1000);
 //        macBook.selectRegionState("Iasi");
 //            Thread.sleep(2500);
-
-
-//        macBook.continueBackToHomePage();
-//            Thread.sleep(2000);
     }
     @org.testng.annotations.Test
     public void TC4_changeCurrency() throws InterruptedException
@@ -135,6 +134,8 @@ public class Test extends BaseTest {
     {
         SearchFunction searchFunction = new SearchFunction(driver);
             Thread.sleep(500);
+        searchFunction.highlightSearchField();
+            Thread.sleep(1000);
         searchFunction.enterSearchTextInput("ipod");
             Thread.sleep(500);
         searchFunction.hoverClickSearchButton();
